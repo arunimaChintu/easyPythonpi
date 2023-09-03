@@ -30,12 +30,22 @@ def div(x:'float', y:'float')->'float':   # For division of 2 numbers
     return  x/y
 
 def mod(x:'float', y:'float')->'float':   # For finding the modulus of 2 numbers
-    return  x%y
+    return  x
+def calculate_percentage(part, whole):
+    """
+    Calculate the percentage of 'part' relative to 'whole'.
 
-def percentage(x:'float', y:'float')->'float':   # For finding the percentage of 2 numbers
-    return ((x+y)/2 ) * 100
-def percentage3(x:'float', y:'float',z:'float')->'float':   # For finding the percentage of 3 numbers
-    return ((x+y+z)/3 ) * 100
+    Args:
+        part (float): The part of the whole you want to calculate the percentage for.
+        whole (float): The total value or whole that the part is a portion of.
+
+    Returns:
+        float: The percentage as a float (e.g., 0.25 for 25%).
+    """
+    if whole == 0:
+        return 0  # Avoid division by zero
+    return (part / whole) * 100
+
 
 
 def factorial(n:'int')->'int': # To find the factorial of 2 numbers
